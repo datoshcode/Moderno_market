@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Comic_CAT";
+  font-weight: 400;
+
+  font-display: swap;
+  src: url("../fonts/Comic_CAT.woff") format("woff");
+}
+
+body {
+  font-family: "Comic_CAT", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  color: #BFBFBF;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0 10px;
+}
+
+.about {
+  margin-top: 25%;
+  text-align: center;
+  line-height: 35px;
+  letter-spacing: 1px;
+}
+
+span {
+  font-size: 18px;
+  position: relative;
+}
+
+span::before {
+  position: absolute;
+  content: '';
+  background-color: #BFBFBF;
+  width: 10px;
+  height: 1px;
+  top: 7px;
+  left: -15px;
+}
+
+span::after {
+  position: absolute;
+  content: '';
+  background-color: #BFBFBF;
+  width: 10px;
+  height: 1px;
+  top: 7px;
+  right: -15px;
+}

@@ -20,12 +20,79 @@ License: GPL.
   box-sizing: inherit;
 }
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, 
-strong, sub, sup, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, 
-legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, 
-details, embed, figure, figcaption, footer, header, hgroup, nav, output,
-ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+strong,
+sub,
+sup,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -34,19 +101,40 @@ ruby, section, summary, time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, nav, section {
-	display: block;
-  
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+
 }
 
-address, caption, cite, code, dfn, em, h1, h2, h3, h4, h5, h6, strong, th, 
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+th,
 var {
   font-weight: normal;
   font-style: normal;
 }
 
-p + p {
+p+p {
   margin-top: 1em;
 }
 
@@ -65,7 +153,7 @@ body {
   line-height: 1.5;
 }
 
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -96,7 +184,9 @@ table {
   border-spacing: 0;
 }
 
-caption, th, td {
+caption,
+th,
+td {
   text-align: left;
   vertical-align: top;
   font-weight: normal;
@@ -117,7 +207,10 @@ del {
   text-decoration: line-through;
 }
 
-pre, code, kbd, samp {
+pre,
+code,
+kbd,
+samp {
   font-family: "Andale Mono", "Lucida Console", "Courier New", Courier,
     monospace;
   font-size: 1em;
@@ -127,7 +220,8 @@ small {
   font-size: 80%;
 }
 
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -142,14 +236,19 @@ sup {
   top: -0.5em;
 }
 
-img, svg {
+img,
+svg {
   vertical-align: top;
   max-width: 100%;
   height: auto;
   border: 0;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: 1.15;
@@ -160,23 +259,21 @@ input::-ms-clear {
   display: none;
 }
 
-button, input {
+button,
+input {
   overflow: visible;
 }
 
-button, select {
+button,
+select {
   text-transform: none;
 }
 
-button, input[type="submit"] {
+button,
+input[type="submit"] {
   display: inline-block;
   box-shadow: none;
   cursor: pointer;
-}
-
-input:focus, input:active,
-button:focus, button:active {
-  outline: none;
 }
 
 button,

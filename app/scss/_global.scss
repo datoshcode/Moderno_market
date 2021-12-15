@@ -1,7 +1,15 @@
+// Контейнер на ширину в 1200px
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+// Контейнер на всю ширину экрана
+.container-fluid {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 body {

@@ -2,12 +2,11 @@
 @import 'reset+';
 // Фрагмент переменных
 @import 'vars';
-// Фрагмент глобальных стилей
-@import 'global';
-// Фрагмент адаптива
-@import 'media';
 // Фрагмент шрифтов
 @import 'fonts';
+// Фрагмент глобальных стилей
+@import 'global';
+
 
 // Header top
 .header__top-inner {
@@ -137,6 +136,12 @@
   }
 }
 
-
-
 // Search /end
+
+
+
+
+
+
+// Фрагмент для адаптива
+@import 'media';

@@ -1,0 +1,44 @@
+// Roboto-Regular 400
+@font-face {
+  font-family: 'Roboto-Regular', sans-serif;
+  src: url(../fonts/Roboto-Regular.woff2) format ('woff2'),
+    url(../fonts/Roboto-Regular.woff) format ('woff');
+  font-weight: 400;
+  font-display: swap;
+}
+
+// Roboto-Medium 500
+@font-face {
+  font-family: 'Roboto-Medium', sans-serif;
+  src: url(../fonts/Roboto-Medium.woff2) format ('woff2'),
+    url(../fonts/Roboto-Medium.woff) format ('woff');
+  font-weight: 500;
+  font-display: swap;
+}
+
+// Roboto-Bold 700
+@font-face {
+  font-family: 'Roboto-Bold', sans-serif;
+  src: url(../fonts/Roboto-Bold.woff2) format ('woff2'),
+    url(../fonts/Roboto-Bold.woff) format ('woff');
+  font-weight: 700;
+  font-display: swap;
+}
+
+// Lato-Semibold 600
+@font-face {
+  font-family: 'Lato-Semibold', sans-serif;
+  src: url(../fonts/Lato-Semibold.woff2) format ('woff2'),
+    url(../fonts/Lato-Semibold.woff) format ('woff');
+  font-weight: 600;
+  font-display: swap;
+}
+
+// Raleway-Bold 700
+@font-face {
+  font-family: 'Raleway-Bold', sans-serif;
+  src: url(../fonts/Raleway-Bold.woff2) format ('woff2'),
+    url(../fonts/Raleway-Bold.woff) format ('woff');
+  font-weight: 700;
+  font-display: swap;
+}

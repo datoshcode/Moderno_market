@@ -1,3 +1,7 @@
+a {
+  color: $color-text;
+}
+
 // Контейнер на ширину в 1200px
 .container {
   max-width: 1200px;
@@ -18,4 +22,13 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: $color-text;
+}
+
+.title {
+  color: $color-bg-black;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 60px;
+  text-align: center;
+  margin-bottom: 30px;
 }

@@ -1,15 +1,21 @@
-// Фрагмент сброса стилей
-@import 'reset+';
+// start Фрагменты 
 // Фрагмент переменных
 @import 'vars';
-// Фрагмент глобальных стилей
-@import 'global';
-// Фрагмент адаптива
-@import 'media';
+// Фрагмент сброса стилей
+@import 'reset+';
 // Фрагмент шрифтов
 @import 'fonts';
+// Фрагмент глобальных стилей
+@import 'global';
+// Slick slider
+@import 'jquery.rateyo';
+// Slick slider
+@import 'slick';
 
-// Header top
+
+// end Фрагменты 
+
+// start Header top
 .header__top-inner {
   display: flex;
   justify-content: space-between;
@@ -44,8 +50,9 @@
   margin-left: 7px;
 }
 
+// start Навигационное меню
 .header__menu {
-  background-color: $color-bg;
+  background-color: $color-bg-black;
 }
 
 .menu {
@@ -71,9 +78,10 @@
   }
 }
 
-// Header top /end
+// еnd Навигационное меню
+//end Header top
 
-// Search
+//start Search
 .search {
   background-repeat: no-repeat;
   background-size: cover;
@@ -137,6 +145,200 @@
   }
 }
 
+//end Search
+// start Products
+.products {
+  padding: 110px 0;
+  background-color: $color-bg-grey;
+}
+
+.products__inner-btn {
+  text-align: center;
+  margin-bottom: 60px;
+
+  button {
+    padding: 12px 21px;
+    border: none;
+    background-color: #fff;
+    color: $color-bg-black;
+    cursor: pointer;
+
+    &+button {
+      margin-left: 5px;
+    }
+
+    &.mixitup-control-active {
+      background-color: $color-red;
+      color: #fff;
+      box-shadow: 0px 2px 5px 0px rgba(202, 215, 228, 0.75);
+
+    }
+  }
+}
+
+.products__inner-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product__item {
+  max-width: 442px;
+  width: 100%;
+  box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+  background-color: #fff;
+  margin-bottom: 30px;
+
+  &-img {
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    align-items: center;
+    min-height: 90px;
+    font-weight: 500;
+    color: $color-bg-black;
+    border-bottom: 1px solid #e7ecf2;
+  }
+
+  &-name {
+    max-width: 310px;
+  }
+
+  &-title {
+    font-size: 18px;
+    display: block;
+  }
+
+  &-category {
+    display: block;
+    font-size: 14px;
+    color: $color-green;
+  }
+
+  &-price {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    padding: 10px 30px;
+  }
+
+  &-author {
+    display: flex;
+    align-items: center;
+    max-width: 245px;
+
+    .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-position: center;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-right: 14px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  &-star {
+    color: #b0bec5;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+
+    span {
+      color: $color-bg-black;
+    }
+  }
+
+}
+
+.product__item:hover {
+  box-shadow: 0px 16px 20px 0px rgba(216, 216, 216, 0.75);
+}
+
+.product__bottom-btn {
+  text-align: center;
+
+  button {
+    margin: 45px 5px 0;
+    box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
+    border: none;
+    background-color: #fff;
+    color: $color-bg-black;
+    padding: 20px 30px;
+
+    &.mixitup-control-active {
+      background-color: $color-red;
+      color: #fff;
+      box-shadow: 0px 2px 5px 0px rgba(202, 215, 228, 0.75);
+
+    }
+  }
+}
+
+// end Products
+
+// start Product-slider
+.product-slider {
+  padding: 110px 0 120px;
+
+  .slick-dots {
+    text-align: center;
+    margin-top: 50px;
+
+    li {
+      display: inline-block;
+      margin-left: 3px;
+      margin-right: 3px;
+
+      &.slick-active {
+        button {
+          background-color: $color-green;
+        }
+      }
+
+      button {
+        border-radius: 50%;
+        background-color: #e8e8e8;
+        box-shadow: inset 0 1px 1px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+        width: 16px;
+        height: 16px;
+        border: none;
+        outline: none;
+        // Отключаем цифры
+        font-size: 0;
+      }
+    }
+  }
+}
 
 
-// Search /end
+// end Product-slider
+
+
+
+
+
+
+
+// Фрагмент для адаптива
+@import 'media';

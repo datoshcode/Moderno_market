@@ -1,12 +1,18 @@
 // start Фрагменты 
-// Фрагмент сброса стилей
-@import 'reset+';
 // Фрагмент переменных
 @import 'vars';
+// Фрагмент сброса стилей
+@import 'reset+';
 // Фрагмент шрифтов
 @import 'fonts';
 // Фрагмент глобальных стилей
 @import 'global';
+// Slick slider
+@import 'jquery.rateyo';
+// Slick slider
+@import 'slick';
+
+
 // end Фрагменты 
 
 // start Header top
@@ -233,6 +239,7 @@
   &-author {
     display: flex;
     align-items: center;
+    max-width: 245px;
 
     .avatar {
       width: 30px;
@@ -249,7 +256,17 @@
       font-size: 14px;
       font-weight: 500;
     }
+  }
 
+  &-star {
+    color: #b0bec5;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+
+    span {
+      color: $color-bg-black;
+    }
   }
 
 }
@@ -278,10 +295,44 @@
   }
 }
 
-
-
-
 // end Products
+
+// start Product-slider
+.product-slider {
+  padding: 110px 0 120px;
+
+  .slick-dots {
+    text-align: center;
+    margin-top: 50px;
+
+    li {
+      display: inline-block;
+      margin-left: 3px;
+      margin-right: 3px;
+
+      &.slick-active {
+        button {
+          background-color: $color-green;
+        }
+      }
+
+      button {
+        border-radius: 50%;
+        background-color: #e8e8e8;
+        box-shadow: inset 0 1px 1px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+        width: 16px;
+        height: 16px;
+        border: none;
+        outline: none;
+        // Отключаем цифры
+        font-size: 0;
+      }
+    }
+  }
+}
+
+
+// end Product-slider
 
 
 

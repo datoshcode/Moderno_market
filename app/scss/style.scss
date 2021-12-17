@@ -1,6 +1,8 @@
 // start Фрагменты 
 // Фрагмент переменных
 @import 'vars';
+// Фрагменты миксины
+@import 'mixins';
 // Фрагмент сброса стилей
 @import 'reset+';
 // Фрагмент шрифтов
@@ -72,8 +74,7 @@
 
   a {
     color: #fff;
-    font-family: 'Roboto-Medium', sans-serif;
-    font-weight: 500;
+    @include font-roboto-med;
     font-size: 14px;
   }
 }
@@ -96,7 +97,7 @@
 
   // Заголовок
   &-title {
-    font-weight: 700;
+    @include font-roboto-bold;
     font-size: 48px;
     line-height: 72px;
     margin-bottom: 10px;
@@ -104,7 +105,7 @@
 
   // Подзаголовок
   &-text {
-    font-weight: 500;
+    @include font-roboto-med;
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 50px;
@@ -124,13 +125,13 @@
       height: 56px;
       border: none;
       font-size: 14px;
-      font-weight: 500;
+      @include font-roboto-med;
       padding-left: 25px;
       padding-right: 60px;
 
       &::placeholder {
         color: #90a4ae;
-        font-weight: 500;
+        @include font-roboto-med;
       }
     }
 
@@ -203,7 +204,7 @@
     padding: 10px 30px;
     align-items: center;
     min-height: 90px;
-    font-weight: 500;
+    @include font-roboto-med;
     color: $color-bg-black;
     border-bottom: 1px solid #e7ecf2;
   }
@@ -225,7 +226,7 @@
 
   &-price {
     font-size: 20px;
-    font-weight: 700;
+    @include font-roboto-bold;
   }
 
   &-info {
@@ -254,7 +255,7 @@
 
     span {
       font-size: 14px;
-      font-weight: 500;
+      @include font-roboto-med;
     }
   }
 
@@ -331,8 +332,91 @@
   }
 }
 
-
 // end Product-slider
+
+// start Advantages
+.advantages {
+  background-color: $color-bg-black;
+  padding: 110px 0;
+
+}
+
+.advantages__title {
+  color: #fff;
+}
+
+.advantages__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  max-width: 370px;
+  text-align: center;
+  padding: 0 15px;
+
+  &:hover {
+    .advantages__item-images {
+      background-color: $color-green;
+
+      g {
+        fill: #fff;
+      }
+    }
+
+    .advantages__item-title {
+      color: $color-green;
+    }
+  }
+
+  &-images {
+    width: 114px;
+    height: 114px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+    transition: all .5s;
+  }
+
+  &-title {
+    @include font-roboto-med;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 25px;
+    transition: all .5s;
+  }
+
+  &-text {
+    color: #b0bec5;
+  }
+}
+
+.lock-icon {
+  svg {
+    width: 80px;
+  }
+
+}
+
+.gift-icon {
+  svg {
+    width: 85px;
+  }
+
+}
+
+.heart-icon {
+  svg {
+    width: 86px;
+  }
+
+}
+
+
+// end Advantages
 
 
 

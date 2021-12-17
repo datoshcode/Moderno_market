@@ -1,0 +1,27 @@
+// start Fonts
+@mixin font-roboto-reg {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-roboto-med {
+  font-family: 'Roboto-Medium', sans-serif;
+  font-weight: 500;
+}
+
+@mixin font-roboto-bold {
+  font-family: 'Roboto-Bold', sans-serif;
+  font-weight: 700;
+}
+
+@mixin font-lato-sbold {
+  font-family: 'Lato-Semibold', sans-serif;
+  font-weight: 600;
+}
+
+@mixin font-raleway-sbold {
+  font-family: 'Raleway-Bold', sans-serif;
+  font-weight: 700;
+}
+
+// end Fonts

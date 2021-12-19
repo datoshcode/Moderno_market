@@ -1,6 +1,8 @@
 // start Фрагменты 
 // Фрагмент переменных
 @import 'vars';
+// Фрагменты миксины
+@import 'mixins';
 // Фрагмент сброса стилей
 @import 'reset+';
 // Фрагмент шрифтов
@@ -72,10 +74,20 @@
 
   a {
     color: #fff;
-    font-family: 'Roboto-Medium', sans-serif;
-    font-weight: 500;
+    @include font-roboto-med;
     font-size: 14px;
   }
+}
+
+//Панель управления
+.header__circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+ & + .header__circle {
+   margin-left: 15px;
+ }
 }
 
 // еnd Навигационное меню
@@ -96,7 +108,7 @@
 
   // Заголовок
   &-title {
-    font-weight: 700;
+    @include font-roboto-bold;
     font-size: 48px;
     line-height: 72px;
     margin-bottom: 10px;
@@ -104,7 +116,7 @@
 
   // Подзаголовок
   &-text {
-    font-weight: 500;
+    @include font-roboto-med;
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 50px;
@@ -124,13 +136,13 @@
       height: 56px;
       border: none;
       font-size: 14px;
-      font-weight: 500;
+      @include font-roboto-med;
       padding-left: 25px;
       padding-right: 60px;
 
       &::placeholder {
         color: #90a4ae;
-        font-weight: 500;
+        @include font-roboto-med;
       }
     }
 
@@ -203,7 +215,7 @@
     padding: 10px 30px;
     align-items: center;
     min-height: 90px;
-    font-weight: 500;
+    @include font-roboto-med;
     color: $color-bg-black;
     border-bottom: 1px solid #e7ecf2;
   }
@@ -225,7 +237,7 @@
 
   &-price {
     font-size: 20px;
-    font-weight: 700;
+    @include font-roboto-bold;
   }
 
   &-info {
@@ -254,7 +266,7 @@
 
     span {
       font-size: 14px;
-      font-weight: 500;
+      @include font-roboto-med;
     }
   }
 
@@ -331,12 +343,359 @@
   }
 }
 
-
 // end Product-slider
 
+// start Advantages
+.advantages {
+  background-color: $color-bg-black;
+  padding: 110px 0;
+
+}
+
+.advantages__title {
+  color: #fff;
+}
+
+.advantages__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  max-width: 370px;
+  text-align: center;
+  padding: 0 15px;
+
+  &:hover {
+    .advantages__item-images {
+      background-color: $color-green;
+
+      g {
+        fill: #fff;
+      }
+    }
+
+    .advantages__item-title {
+      color: $color-green;
+    }
+  }
+
+  &-images {
+    width: 114px;
+    height: 114px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+    transition: all .5s;
+  }
+
+  &-title {
+    @include font-roboto-med;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 25px;
+    transition: all .5s;
+  }
+
+  &-text {
+    color: #b0bec5;
+  }
+}
+
+.lock-icon {
+  svg {
+    width: 80px;
+  }
+
+}
+
+.gift-icon {
+  svg {
+    width: 85px;
+  }
+
+}
+
+.heart-icon {
+  svg {
+    width: 86px;
+  }
+
+}
+
+// end Advantages
+
+// start author
+.author {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    max-width: 650px;
+    width: 100%;
+    min-height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-green;
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 30px;
+    color: #fff;
+    margin-right: 45px;
+    max-width: 261px;
+
+    span {
+      @include font-roboto-bold;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 36px;
+    padding: 14px 40px;
+    background-color: #fff;
+  }
+}
+
+// end author
+
+// start tutorial
+.tutorial {
+  padding: 70px 0 120px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.tutorial__item {
+  max-width: 370px;
+  width: 100%;
+
+  &-image {
+    min-height: 270px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+  }
+
+  &-title {
+    @include font-roboto-bold;
+    font-size: 24px;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 30px 10px;
+    color: $color-bg-black;
+
+  }
+}
+
+// end tutorial
+
+// start Footer
+.footer {
+  background-color: $color-bg-black;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 80px;
+  }
+}
+
+.footer__col {
+  max-width: 270px;
+  width: 100%;
+
+  &-menu {
+    max-width: 220px;
+  }
+
+  &-title {
+    @include font-raleway-sbold;
+    font-size: 22px;
+    color: #fff;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 3px;
+      width: 51px;
+      background-color: $color-green;
+      bottom: 0;
+      left: 2px;
+    }
+  }
+
+  &-text {
+    color: #b7c3c8;
+    margin-bottom: 30px;
+  }
+}
+
+.footer__info {
+  margin-top: 18px;
+  @include font-lato-sbold;
+  color: #fff;
+  padding-left: 30px;
+  position: relative;
+
+  // Иконка маркер карты
+  &::before {
+    @include icomoon;
+    font-size: 18px;
+    content: "\f041";
+    color: $color-green;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.footer__info-phone {
+
+  // Иконка телефон
+  &::before {
+    content: "\f095";
+  }
+}
+
+.footer__col-list,
+.footer__social-link {
+  list-style: none;
+}
+
+
+.footer__col-list {
+  a {
+    margin-bottom: 13px;
+    color: #b7c3c8;
+    padding-left: 22px;
+    position: relative;
+
+    &::before {
+      @include icomoon;
+      font-size: 18px;
+      content: "\f105";
+      color: $color-green;
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.footer__social-link {
+  margin-bottom: 33px;
+
+  li {
+    display: inline-block;
+
+    &+li {
+      margin-left: 7px;
+    }
+  }
+
+  // css sprite
+  a {
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/icons/css_sprites.png);
+  }
+}
+
+.link-twitter {
+  background-position: -28px -28px;
+}
+
+.link-youtube {
+  background-position: -56px 0;
+}
+
+.link-pinterest {
+  background-position: 0 -28px;
+}
+
+.link-linkedin {
+  background-position: -28px 0;
+}
+
+.footer__form-title {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer__form {
+  position: relative;
+
+  input {
+    border: none;
+    background-color: #2f3c43;
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    padding-left: 13px;
+    padding-right: 50px;
+    font-size: 14px;
+
+    &::placeholder {
+      color: #697378;
+    }
+  }
+
+  button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $color-green;
+    border: none;
+    height: 40px;
+    width: 43px;
+    cursor: pointer;
+
+    &::before {
+      @include icomoon;
+      content: "\f124";
+      color: #fff;
+      font-size: 20px;
+      top: 8px;
+      left: 13px;
+      position: absolute;
+    }
+  }
+}
 
 
 
+.footer__copy {
+  border-top: 1px solid #424d53;
+}
+
+
+.footer__copy-text {
+  text-align: center;
+  color: $color-text-grey;
+  font-size: 15px;
+  padding: 25px 0;
+}
+
+// end Footer
 
 
 

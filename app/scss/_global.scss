@@ -17,16 +17,15 @@ a {
 }
 
 body {
-  font-family: 'Roboto-Regular', sans-serif;
+  @include font-roboto-reg;
   font-size: 15px;
   line-height: 24px;
-  font-weight: 400;
   color: $color-text;
 }
 
 .title {
+  @include font-roboto-bold;
   color: $color-bg-black;
-  font-weight: 700;
   font-size: 36px;
   line-height: 60px;
   text-align: center;

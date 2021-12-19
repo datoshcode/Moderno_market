@@ -494,6 +494,198 @@
 
 // end tutorial
 
+// start Footer
+.footer {
+  background-color: $color-bg-black;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 80px;
+  }
+}
+
+.footer__col {
+  max-width: 270px;
+  width: 100%;
+
+  &-menu {
+    max-width: 220px;
+  }
+
+  &-title {
+    @include font-raleway-sbold;
+    font-size: 22px;
+    color: #fff;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 3px;
+      width: 51px;
+      background-color: $color-green;
+      bottom: 0;
+      left: 2px;
+    }
+  }
+
+  &-text {
+    color: #b7c3c8;
+    margin-bottom: 30px;
+  }
+}
+
+.footer__info {
+  margin-top: 18px;
+  @include font-lato-sbold;
+  color: #fff;
+  padding-left: 30px;
+  position: relative;
+
+  // Иконка маркер карты
+  &::before {
+    @include icomoon;
+    font-size: 18px;
+    content: "\f041";
+    color: $color-green;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.footer__info-phone {
+
+  // Иконка телефон
+  &::before {
+    content: "\f095";
+  }
+}
+
+.footer__col-list,
+.footer__social-link {
+  list-style: none;
+}
+
+
+.footer__col-list {
+  a {
+    margin-bottom: 13px;
+    color: #b7c3c8;
+    padding-left: 22px;
+    position: relative;
+
+    &::before {
+      @include icomoon;
+      font-size: 18px;
+      content: "\f105";
+      color: $color-green;
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.footer__social-link {
+  margin-bottom: 33px;
+
+  li {
+    display: inline-block;
+
+    &+li {
+      margin-left: 7px;
+    }
+  }
+
+  // css sprite
+  a {
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/icons/css_sprites.png);
+  }
+}
+
+.link-twitter {
+  background-position: -28px -28px;
+}
+
+.link-youtube {
+  background-position: -56px 0;
+}
+
+.link-pinterest {
+  background-position: 0 -28px;
+}
+
+.link-linkedin {
+  background-position: -28px 0;
+}
+
+.footer__form-title {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer__form {
+  position: relative;
+
+  input {
+    border: none;
+    background-color: #2f3c43;
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    padding-left: 13px;
+    padding-right: 50px;
+    font-size: 14px;
+
+    &::placeholder {
+      color: #697378;
+    }
+  }
+
+  button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $color-green;
+    border: none;
+    height: 40px;
+    width: 43px;
+    cursor: pointer;
+
+    &::before {
+      @include icomoon;
+      content: "\f124";
+      color: #fff;
+      font-size: 20px;
+      top: 8px;
+      left: 13px;
+      position: absolute;
+    }
+  }
+}
+
+
+
+.footer__copy {
+  border-top: 1px solid #424d53;
+}
+
+
+.footer__copy-text {
+  text-align: center;
+  color: $color-text-grey;
+  font-size: 15px;
+  padding: 25px 0;
+}
+
+// end Footer
+
 
 
 // Фрагмент для адаптива

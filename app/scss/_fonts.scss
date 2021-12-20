@@ -46,18 +46,17 @@
 // Icomoon fonts
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?ejj2q2');
-  src: url('../fonts/icomoon.eot?ejj2q2#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?ejj2q2') format('truetype'),
-    url('../fonts/icomoon.woff?ejj2q2') format('woff'),
-    url('../fonts/icomoon.svg?ejj2q2#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?564rwx');
+  src:  url('../fonts/icomoon.eot?564rwx#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?564rwx') format('truetype'),
+    url('../fonts/icomoon.woff?564rwx') format('woff'),
+    url('../fonts/icomoon.svg?564rwx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -72,14 +71,64 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-// Маркер карты
+//Звездочка для сносок
+.icon-asterisk:before {
+  content: "\f069";
+}
+
+//Лупа
+.icon-search:before {
+  content: "\f002";
+}
+
+//Конверт
+.icon-envelope-o:before {
+  content: "\f003";
+}
+
+//Пользователь
+.icon-user:before {
+  content: "\f007";
+}
+
+//Меню-сетка на 4
+.icon-th-large:before {
+  content: "\f009";
+}
+
+//Меню-сетка на 6
+.icon-th-list:before {
+  content: "\f00b";
+}
+
+//Закрыть
+.icon-close:before {
+  content: "\f00d";
+}
+
+//Замок
+.icon-lock:before {
+  content: "\f023";
+}
+
+//Маркер карты
 .icon-map-marker:before {
   content: "\f041";
 }
 
-// Корзина
+//Блокнот
+.icon-edit:before {
+  content: "\f044";
+}
+
+//Корзина для покупок
 .icon-shopping-cart:before {
   content: "\f07a";
+}
+
+//Сердце
+.icon-heart-o:before {
+  content: "\f08a";
 }
 
 // Телефон
@@ -87,17 +136,105 @@
   content: "\f095";
 }
 
-// Молния
-.icon-flash:before {
-  content: "\f0e7";
+// twitter
+.icon-twitter:before {
+  content: "\f099";
 }
 
+// facebook
+.icon-facebook:before {
+  content: "\f09a";
+}
+
+// Колокольчик
+.icon-bell-o:before {
+  content: "\f0a2";
+}
+
+
+.icon-group:before {
+  content: "\f0c0";
+}
+.icon-users:before {
+  content: "\f0c0";
+}
+.icon-sort:before {
+  content: "\f0dc";
+}
+.icon-unsorted:before {
+  content: "\f0dc";
+}
+.icon-sort-desc:before {
+  content: "\f0dd";
+}
+.icon-sort-down:before {
+  content: "\f0dd";
+}
+// linkedin
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+.icon-comment-o:before {
+  content: "\f0e5";
+}
+.icon-comments-o:before {
+  content: "\f0e6";
+}
+.icon-bolt:before {
+  content: "\f0e7";
+}
+.icon-suitcase:before {
+  content: "\f0f2";
+}
 // Стрелка вправо
 .icon-angle-right:before {
   content: "\f105";
 }
-
-// Локация
+.icon-angle-down:before {
+  content: "\f107";
+}
+.icon-circle-o:before {
+  content: "\f10c";
+}
+.icon-circle:before {
+  content: "\f111";
+}
+.icon-mail-reply:before {
+  content: "\f112";
+}
+.icon-reply:before {
+  content: "\f112";
+}
+.icon-meh-o:before {
+  content: "\f11a";
+}
 .icon-location-arrow:before {
   content: "\f124";
+}
+.icon-cny:before {
+  content: "\f157";
+}
+.icon-jpy:before {
+  content: "\f157";
+}
+.icon-rmb:before {
+  content: "\f157";
+}
+.icon-yen:before {
+  content: "\f157";
+}
+.icon-sort-amount-desc:before {
+  content: "\f161";
+}
+.icon-youtube-play:before {
+  content: "\f16a";
+}
+.icon-foursquare:before {
+  content: "\f180";
+}
+.icon-pagelines:before {
+  content: "\f18c";
+}
+.icon-pinterest-p:before {
+  content: "\f231";
 }

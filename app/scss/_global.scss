@@ -2,6 +2,10 @@ a {
   color: $color-text;
 }
 
+ul {
+  list-style: none;
+}
+
 // Контейнер на ширину в 1200px
 .container {
   max-width: 1200px;
@@ -35,4 +39,17 @@ body {
 .rate-star {
   display: inline-block;
   margin-right: 13px;
+}
+
+.angle-right {
+  position: relative;
+  padding-left: 15px;
+  &::before {
+    @include icomoon;
+    content: "\f105";
+    position: absolute;
+    left: 0;
+    color: $color-green;
+    font-size: 14px;
+  }
 }

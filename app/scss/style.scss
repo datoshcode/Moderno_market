@@ -34,6 +34,11 @@
   }
 }
 
+.header__box {
+  display: flex;
+  align-items: center;
+}
+
 .header__btn {
   padding: 4px;
   width: 72px;
@@ -47,7 +52,8 @@
   background-color: $color-green;
 }
 
-.header__btn-register {
+.header__btn-register,
+.header__btn-logout {
   background-color: $color-red;
   margin-left: 7px;
 }
@@ -81,13 +87,289 @@
 
 //Панель управления
 .header__circle {
+  &.active {
+    display: block;
+  }
+
+  display: none;
   width: 34px;
   height: 34px;
   border-radius: 50%;
   background-color: #f5f5f5;
- & + .header__circle {
-   margin-left: 15px;
- }
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #a0a0a0;
+    font-size: 14px;
+  }
+
+  // Цыфровой индикатор
+  span {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    right: -7px;
+    top: -7px;
+    font-size: 11px;
+    color: #fff;
+  }
+}
+
+// Колокольчик
+.notification {
+  span {
+    background-color: $color-yellow;
+  }
+}
+
+// Конверт
+.message {
+  span {
+    background-color: $color-orange;
+  }
+}
+
+// Корзинка
+.basket {
+  span {
+    background-color: $color-green;
+  }
+}
+
+// Пользователь
+.user {
+  margin-left: 20px;
+  margin-right: 25px;
+  padding-right: 20px;
+  position: relative;
+
+  &::before {
+    font-family: icomoon;
+    position: absolute;
+    content: '\f107';
+    font-size: 16px;
+    color: #707070;
+    top: 0;
+    right: 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__images {
+    margin-right: 15px;
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  &__info {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  &__name {
+    color: #222;
+  }
+
+  &__money {
+    color: $color-green;
+
+  }
+}
+
+.user__menu {
+  border: 0px solid #ccc;
+  position: absolute;
+  background-color: #fff;
+  padding: 0 20px;
+  width: 158px;
+  top: 71px;
+  left: 20px;
+  transition: all .5s;
+  height: 0;
+  overflow: hidden;
+
+  a {
+    font-size: 12px;
+    color: $color-text;
+    margin-bottom: 15px;
+  }
+}
+
+.circle__menu {
+  position: absolute;
+  top: 69px;
+}
+
+.user__box,
+.basket__box,
+.notification__box,
+.message__box {
+  position: relative;
+  margin-top: 40px;
+  height: 90px;
+
+  &:hover {
+    .user__menu {
+      height: auto;
+      border-with: 1px;
+      padding: 20px;
+      overflow: auto;
+    }
+  }
+}
+
+
+.circle__menu {
+  border-top: 1px solid #e0e0e0;
+  top: 62px;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all .5s;
+}
+
+.basket__box,
+.notification__box,
+.message__box {
+  margin-top: 54px;
+  margin-left: 15px;
+
+  &:hover {
+  .header__circle::before {
+   color: $color-bg-black;
+    }
+  .circle__menu {
+    overflow: hidden;
+    height: auto;
+  }
+  .circle__item {
+  padding: 23px;
+  border-width: 1px;
+  }
+  }
+}
+
+.circle__item {
+  background-color: #fff;
+  border: 0 solid #e0e0e0;
+  border-left-width: 1px;
+    border-right-width: 1px;
+  border-top: none;
+  padding: 0 23px;
+  display: flex;
+  align-items: center;
+  width: 269px;
+  position: relative;
+  transition: all .5s;
+    &::before {
+      position: absolute;
+      top: 27px;
+      right: 27px;
+      color: #b0bec5;
+      font-size: 16px;
+    }
+}
+
+.circle__images {
+  margin-right: 15px;
+}
+
+.circle__info-name {
+  @include font-roboto-med;
+  color: $color-bg-black;
+}
+
+.circle__info-thema {
+  font-size: 12px;
+  color: $color-green;
+}
+
+.circle__info-price {
+  @include font-roboto-med;
+  color: #000;
+  font-size: 16px;
+}
+
+.circle__info-date {
+  font-size: 10px;
+  color: #707070;
+}
+
+.basket__summ {
+  padding: 16px 17px 12px;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  background-color: #fff;
+}
+
+.basket__title {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 13px;
+  padding-right: 22px;
+  margin-bottom: 15px;
+  @include font-roboto-bold;
+  font-size: 16px;
+  color: $color-bg-black;
+}
+
+.basket__btn {
+  @include font-roboto-bold;
+  color: #fff;
+  font-size: 14px;
+  padding: 12px 5px;
+  background-color: $color-green;
+  text-align: center;
+  width: 100px;
+}
+
+.basket__btn-checkout {
+  background-color: $color-red;
+  width: 122px;
+  margin-left: 6px;
+}
+
+// Кнопки Ввойти и Регистрация
+.header__btn-login--off {
+  display: none;
+}
+
+.header__btn-logout {
+  display: none;
+
+  &.header__btn-login--on {
+    display: block;
+  }
+}
+
+.notification__menu,
+.message__menu {
+  .circle__images {
+    margin-right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  .circle__info {
+    line-height: 18px;
+  }
+}
+
+.icons-color::before {
+  color: $color-orange;
 }
 
 // еnd Навигационное меню
@@ -574,12 +856,6 @@
     content: "\f095";
   }
 }
-
-.footer__col-list,
-.footer__social-link {
-  list-style: none;
-}
-
 
 .footer__col-list {
   a {

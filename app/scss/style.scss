@@ -90,7 +90,6 @@
   &.active {
     display: block;
   }
-
   display: none;
   width: 34px;
   height: 34px;
@@ -138,6 +137,7 @@
 
 // Корзинка
 .basket {
+margin-right: 20px; 
   span {
     background-color: $color-green;
   }
@@ -145,7 +145,6 @@
 
 // Пользователь
 .user {
-  margin-left: 20px;
   margin-right: 25px;
   padding-right: 20px;
   position: relative;
@@ -200,6 +199,7 @@
   transition: all .5s;
   height: 0;
   overflow: hidden;
+  z-index: 15;
 
   a {
     font-size: 12px;
@@ -211,6 +211,7 @@
 .circle__menu {
   position: absolute;
   top: 69px;
+  z-index: 15;
 }
 
 .user__box,
@@ -248,17 +249,19 @@
   margin-left: 15px;
 
   &:hover {
-  .header__circle::before {
-   color: $color-bg-black;
+    .header__circle::before {
+      color: $color-bg-black;
     }
-  .circle__menu {
-    overflow: hidden;
-    height: auto;
-  }
-  .circle__item {
-  padding: 23px;
-  border-width: 1px;
-  }
+
+    .circle__menu {
+      overflow: hidden;
+      height: auto;
+    }
+
+    .circle__item {
+      padding: 23px;
+      border-width: 1px;
+    }
   }
 }
 
@@ -266,7 +269,7 @@
   background-color: #fff;
   border: 0 solid #e0e0e0;
   border-left-width: 1px;
-    border-right-width: 1px;
+  border-right-width: 1px;
   border-top: none;
   padding: 0 23px;
   display: flex;
@@ -274,13 +277,14 @@
   width: 269px;
   position: relative;
   transition: all .5s;
-    &::before {
-      position: absolute;
-      top: 27px;
-      right: 27px;
-      color: #b0bec5;
-      font-size: 16px;
-    }
+
+  &::before {
+    position: absolute;
+    top: 27px;
+    right: 27px;
+    color: #b0bec5;
+    font-size: 16px;
+  }
 }
 
 .circle__images {
@@ -309,7 +313,7 @@
 }
 
 .basket__summ {
-  padding: 16px 17px 12px;
+  padding: 15px 15px 12px;
   border: 1px solid #e0e0e0;
   border-top: none;
   background-color: #fff;
@@ -363,6 +367,7 @@
     height: 48px;
     border-radius: 50%;
   }
+
   .circle__info {
     line-height: 18px;
   }
@@ -370,6 +375,11 @@
 
 .icons-color::before {
   color: $color-orange;
+}
+
+// Меню список для  мобильной версии
+.header__btn-menu {
+  display: none;
 }
 
 // еnd Навигационное меню
@@ -957,12 +967,9 @@
   }
 }
 
-
-
 .footer__copy {
   border-top: 1px solid #424d53;
 }
-
 
 .footer__copy-text {
   text-align: center;

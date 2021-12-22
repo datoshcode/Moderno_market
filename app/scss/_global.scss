@@ -20,11 +20,26 @@ ul {
   padding: 0 30px;
 }
 
+html,
+body {
+ height: 100%; 
+}
+
 body {
   @include font-roboto-reg;
   font-size: 15px;
   line-height: 24px;
   color: $color-text;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
 }
 
 .title {

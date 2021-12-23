@@ -11,8 +11,11 @@
 @import 'global';
 // Slick slider
 @import 'jquery.rateyo';
+// fancybox
+@import '_jquery.fancybox';
 // Slick slider
 @import 'slick';
+
 
 
 // end Фрагменты 
@@ -90,6 +93,7 @@
   &.active {
     display: block;
   }
+
   display: none;
   width: 34px;
   height: 34px;
@@ -137,7 +141,8 @@
 
 // Корзинка
 .basket {
-margin-right: 20px; 
+  margin-right: 20px;
+
   span {
     background-color: $color-green;
   }
@@ -381,6 +386,118 @@ margin-right: 20px;
 .header__btn-menu {
   display: none;
 }
+
+// Попапчик регистрации нового пользователя
+// start modal
+#modal {
+  background-color: $color-green;
+  max-width: 730px;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+.login__wrapper {
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      @include icomoon;
+      font-size: 14px;
+      color: #fff;
+      left: 18px;
+      top: 9px;
+    }
+  }
+
+  button {
+    margin-top: 19px;
+    margin-right: 10px;
+    padding: 18px 0 16px;
+    @include font-roboto-bold;
+    box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+    color: #000;
+    width: 140px;
+    background-color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+  }
+
+  .login__lable-name::before {
+    content: "\f007";
+  }
+
+  .login__lable-pass::before {
+    content: "\f023";
+  }
+
+  input {
+    height: 43px;
+    margin-bottom: 8px;
+    border: none;
+    background-color: #76ae36;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 40px;
+    padding-right: 10px;
+    display: block;
+    width: 100%;
+    &::placeholder {
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+}
+
+.lost-pass {
+  display: block;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.creat-acc {
+  margin-top: 19px;
+  padding: 15px 0 15px 28px;
+  text-align: center;
+  width: 245px;
+  background-color: #76ae36;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "\f044";
+    @include icomoon;
+    left: 35px;
+    top: 15px;
+  }
+}
+
+.fancybox-button svg path {
+    fill: #fff;
+  }
+
+.login__title {
+  @include font-roboto-bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+// end modal
 
 // еnd Навигационное меню
 //end Header top

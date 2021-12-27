@@ -543,8 +543,9 @@
   font-size: 16px;
   color: #707070;
   // Разделить на две части
-  column-count: 2; 
+  column-count: 2;
   column-gap: 25px;
+
   li {
     max-width: 270px;
     width: 100%;
@@ -978,6 +979,7 @@
   display: flex;
   text-align: center;
   border: 1px solid #d7d7d7;
+
   .tab {
     width: 100%;
     background-color: #fff;
@@ -985,7 +987,8 @@
     color: #70838d;
     padding: 20px 0;
     cursor: pointer;
-    & + .tab {
+
+    &+.tab {
       border-left: 1px solid #d7d7d7;
     }
   }
@@ -1004,6 +1007,7 @@
 
 .tab-item {
   display: none;
+
   &:first-child {
     display: block;
   }
@@ -1172,6 +1176,171 @@
 }
 
 // end tutorial
+//start product-one aside
+.aside__item {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  padding: 0 32px 32px;
+  margin-bottom: 30px;
+  width: 270px;
+}
+
+.aside__title {
+  border-bottom: 1px solid #dedede;
+  font-size: 20px;
+  color: $color-bg-black;
+  padding: 22px 0 19px;
+  @include font-roboto-bold;
+}
+
+.price__box {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.price__product {
+  font-size: 22px;
+  @include font-roboto-med;
+  color: $color-red;
+}
+
+.product__price {
+  button {
+    margin-bottom: 7px;
+    box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+    border: none;
+    background-color: $color-text;
+    color: #fff;
+    font-family: 'Roboto-Bold', sans-serif !important;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    padding: 17px 5px 15px;
+    width: 100%;
+    cursor: pointer;
+
+    &::before {
+      font-weight: 400;
+      font-family: 'icomoon' !important;
+      padding-right: 8px;
+    }
+  }
+
+  .icon-shopping-cart {
+    background-color: $color-green;
+  }
+
+  .icon-heart-o {
+    background-color: $color-blue;
+  }
+}
+
+.product-author__box {
+  padding: 25px 0;
+  display: flex;
+}
+
+.author__avatar {
+  margin-right: 14px;
+}
+
+.author__name {
+  font-size: 18px;
+  color: $color-bg-black;
+  margin-bottom: 2px;
+}
+
+.author__info-link {
+  color: #707070;
+  font-size: 13px;
+  padding: 6px 9px 5px;
+  border: 1px solid #d6d6d6;
+}
+
+.author-awards-list {
+  li {
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 6px;
+
+    &+li {
+      margin-left: 4px;
+    }
+  }
+
+  .icon-meh-o {
+    background-image: url(../images/aside/flag-orange.png);
+    width: 34px;
+    height: 37px;
+  }
+
+  .icon-pagelines {
+    background-image: url(../images/aside/flag-red.png);
+    width: 34px;
+    height: 37px;
+  }
+
+  .icon-bolt {
+    background-image: url(../images/aside/flag-blue.png);
+    width: 34px;
+    height: 37px;
+  }
+
+  .icon-foursquare {
+    background-image: url(../images/aside/flag-green.png);
+    width: 34px;
+    height: 37px;
+  }
+
+  .icon-yen {
+    background-image: url(../images/aside/flag-grey.png);
+    width: 34px;
+    height: 37px;
+  }
+}
+
+.aside__item-sales {
+  padding-top: 23px;
+  font-size: 16px;
+  @include font-roboto-reg;
+  span {
+    font-size: 20px;
+    padding-right: 13px;
+     @include font-roboto-bold;
+    &::before {
+     @include icomoon;
+     color: #a6b5bb; 
+     content: "\f07a";
+     padding-right: 20px;
+    }
+  }
+}
+
+.aside__item.sales-number {
+  padding-bottom: 25px;
+}
+
+.information__line {
+  font-size: 14px;
+  color: #70838d;
+   margin-top: 20px;
+   line-height: 18px;
+  span {
+    color: $color-bg-black;
+    @include font-roboto-med; 
+    padding-right: 5px;
+  }
+}
+
+.information__line {
+
+}
+
+
+//end product-one aside
 
 // start Footer
 .footer {

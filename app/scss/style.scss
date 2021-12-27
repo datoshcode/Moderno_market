@@ -1306,15 +1306,17 @@
   padding-top: 23px;
   font-size: 16px;
   @include font-roboto-reg;
+
   span {
     font-size: 20px;
     padding-right: 13px;
-     @include font-roboto-bold;
+    @include font-roboto-bold;
+
     &::before {
-     @include icomoon;
-     color: #a6b5bb; 
-     content: "\f07a";
-     padding-right: 20px;
+      @include icomoon;
+      color: #a6b5bb;
+      content: "\f07a";
+      padding-right: 20px;
     }
   }
 }
@@ -1326,21 +1328,103 @@
 .information__line {
   font-size: 14px;
   color: #70838d;
-   margin-top: 20px;
-   line-height: 18px;
+  margin-top: 20px;
+  line-height: 18px;
+
   span {
     color: $color-bg-black;
-    @include font-roboto-med; 
+    @include font-roboto-med;
     padding-right: 5px;
   }
 }
 
-.information__line {
+//end product-one aside
 
+// start page 404
+.page-404__wrapper,
+.about__wrapper {
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  margin-bottom: 150px;
 }
 
+.page-404__head,
+.about__head {
+  font-size: 24px;
+  color: $color-bg-black;
+  padding: 23px 27px;
+  @include font-roboto-med;
+  border-bottom: 1px solid #dcdcdc;
+}
 
-//end product-one aside
+.page-404__inner {
+  text-align: center;
+  background-color: $color-green;
+  @include font-myriadpro-reg;
+  color: #fffefe;
+}
+
+.page-404__404 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 300px;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  line-height: 300px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    background-image: url(../images/404.png);
+    width: 150px;
+    height: 292px;
+    margin-left: 20px;
+  }
+}
+
+.page-404__title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.page-404__text {
+  @include font-myriadpro-reg; 
+  font-size: 18px;
+  max-width: 508px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.page-404__link {
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 20px 30px 16px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin-bottom: 100px;
+}
+// end page 404
+
+// start about
+.about__inner {
+  padding: 0 50px;
+}
+
+.about__box {
+h4 {
+  font-size: 20px;
+  color: #444444;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+p {
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+} 
+// end about
 
 // start Footer
 .footer {

@@ -24,6 +24,11 @@
   font-weight: 700;
 }
 
+@mixin font-myriadpro-reg {
+font-family: 'Myriadpro-Regular', sans-serif;
+ font-weight: 400;
+}
+
 @mixin icomoon {
   font-family: 'icomoon' !important;
 }

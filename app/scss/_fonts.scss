@@ -43,6 +43,15 @@
   font-display: swap;
 }
 
+// Mariadpro-Regular 400
+@font-face {
+  font-family: 'Myriadpro-Regular', sans-serif;
+  src: url(../fonts/Myriadpro-Regular.woff2) format ('woff2'),
+    url(../fonts/Myriadpro-Regular.woff) format ('woff');
+  font-weight: 400;
+  font-display: swap;
+}
+
 // Icomoon fonts
 @font-face {
   font-family: 'icomoon';

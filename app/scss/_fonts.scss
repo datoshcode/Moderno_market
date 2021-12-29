@@ -43,6 +43,15 @@
   font-display: swap;
 }
 
+// Mariadpro-Regular 400
+@font-face {
+  font-family: 'Myriadpro-Regular', sans-serif;
+  src: url(../fonts/Myriadpro-Regular.woff2) format ('woff2'),
+    url(../fonts/Myriadpro-Regular.woff) format ('woff');
+  font-weight: 400;
+  font-display: swap;
+}
+
 // Icomoon fonts
 @font-face {
   font-family: 'icomoon';
@@ -180,6 +189,7 @@
 .icon-comments-o:before {
   content: "\f0e6";
 }
+// молния
 .icon-bolt:before {
   content: "\f0e7";
 }
@@ -205,6 +215,7 @@
 .icon-reply:before {
   content: "\f112";
 }
+// смайл
 .icon-meh-o:before {
   content: "\f11a";
 }
@@ -220,6 +231,7 @@
 .icon-rmb:before {
   content: "\f157";
 }
+// йены
 .icon-yen:before {
   content: "\f157";
 }
@@ -232,6 +244,8 @@
 .icon-foursquare:before {
   content: "\f180";
 }
+
+// Листик
 .icon-pagelines:before {
   content: "\f18c";
 }

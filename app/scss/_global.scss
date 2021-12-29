@@ -6,6 +6,10 @@ ul {
   list-style: none;
 }
 
+.header {
+  background-color: #fff;
+}
+
 // Контейнер на ширину в 1200px
 .container {
   max-width: 1200px;
@@ -20,11 +24,30 @@ ul {
   padding: 0 30px;
 }
 
+html,
+body {
+ height: 100%; 
+}
+
 body {
   @include font-roboto-reg;
   font-size: 15px;
   line-height: 24px;
   color: $color-text;
+  // overflow-x: hidden необходим чтобы не было нижнего скрола при нажатии 
+  // на кнопку "Пользователь" мобильной версии
+   overflow-x: hidden;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+  background-color: #f4f6f5;
 }
 
 .title {

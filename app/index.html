@@ -25,14 +25,14 @@
           <div class="header__box">
             <!-- Панель управления  -->
             <!-- Уведомления -->
-            <div class="notification__box">
+            <div class="notification__box header__btn-login--off">
               <a class="notification header__circle active icon-bell-o" href="#">
                 <span>8</span>
               </a>
               <!-- Выпадающее меню  -->
               <div class="circle__menu notification__menu">
                 <!-- Пользователь 1 -->
-                <a  class="circle__item icon-bell-o icons-color" href="#">
+                <a class="circle__item icon-bell-o icons-color" href="#">
                   <img class="circle__images" src="images/icons/users/kazi.jpg" alt="Thema">
                   <div class="circle__info">
                     <div class="circle__info-thema">Need WP Help!</div>
@@ -58,7 +58,7 @@
               </div>
             </div>
             <!-- Сообщения -->
-            <div class="message__box">
+            <div class="message__box header__btn-login--off">
               <a class="message header__circle active icon-envelope-o" href="#">
                 <span>5</span>
               </a>
@@ -130,7 +130,7 @@
             </div>
             <!-- Пользователь и выпадающее меню -->
             <div class="user__box">
-              <a class="user" href="#">
+              <a class="user header__btn-login--off" href="#">
                 <div class="user__inner">
                   <div class="user__images">
                     <img src="images/icons/users/mike.jpg" alt="avatar">
@@ -157,18 +157,35 @@
             </div>
             <!-- Кнопки панели -->
             <!-- Логин -->
-            <a class="header__btn header__btn-login header__btn-login--off" href="#">Login</a>
+            <!-- Скрипт fancybox для запуска попапчика для регистрации нового пользователя -->
+            <a class="header__btn header__btn-login" data-fancybox data-src="#modal" href="javascript:;">Login</a>
             <!-- Вход -->
-            <a class="header__btn header__btn-logout header__btn-login--on" href="#">Logout</a>
+            <a class="header__btn header__btn-logout header__btn-login--off" href="#">Logout</a>
             <!-- Регистрация -->
-            <a class="header__btn header__btn-register header__btn-login--off" href="#">Register</a>
+            <a class="header__btn header__btn-register" href="#">Register</a>
           </div>
+          <!-- Список меню для мобильной версии -->
+          <div class="header__btn-menu icon-user"></div>
         </div>
       </div>
       <!-- start Навигационное меню -->
       <div class="header__menu">
         <div class="container">
           <nav class="menu">
+            <!--start Кнопка меню бургер для мобильной версии -->
+            <div class="menu__btn">
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 250.579 250.579" style="enable-background:new 0 0 250.579 250.579;" xml:space="preserve">
+                <g id="Menu">
+                  <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M22.373,76.068h205.832c12.356,0,22.374-10.017,22.374-22.373
+    c0-12.356-10.017-22.373-22.374-22.373H22.373C10.017,31.323,0,41.339,0,53.696C0,66.052,10.017,76.068,22.373,76.068z
+     M228.205,102.916H22.373C10.017,102.916,0,112.933,0,125.289c0,12.357,10.017,22.373,22.373,22.373h205.832
+    c12.356,0,22.374-10.016,22.374-22.373C250.579,112.933,240.561,102.916,228.205,102.916z M228.205,174.51H22.373
+    C10.017,174.51,0,184.526,0,196.883c0,12.356,10.017,22.373,22.373,22.373h205.832c12.356,0,22.374-10.017,22.374-22.373
+    C250.579,184.526,240.561,174.51,228.205,174.51z" />
+                </g>
+              </svg>
+            </div>
+            <!--end Кнопка меню бургер для мобильной версии -->
             <ul class="menu__list">
               <li>
                 <a href="#">Home</a>
@@ -882,7 +899,7 @@
       <div class="container">
         <div class="footer__inner">
           <!-- About Company -->
-          <div class="footer__col">
+          <div class="footer__col footer__col-adress">
             <h4 class="footer__col-title">About Company</h4>
             <div class="footer__col-text">
               Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim
@@ -917,7 +934,7 @@
             </ul>
           </div>
           <!-- Follow Us On -->
-          <div class="footer__col">
+          <div class="footer__col footer__col-social">
             <h3 class="footer__col-title">Follow Us On</h3>
             <!-- start CSS sprite -->
             <ul class="footer__social-link">
@@ -948,10 +965,30 @@
       </div>
     </div>
   </footer>
+
+  <!--start Форма (папап) регистрации нового пользователя -->
+  <div id="modal">
+    <div class="login__wrapper">
+    <h1 class="login__title">Login</h1>
+    <form>
+      <label class="login__lable-name">
+        <input type="text" placeholder="Name" required>
+      </label>
+      <label class="login__lable-pass">
+        <input type="text" placeholder="Password" required>
+      </label>
+      <button type="submit">submit</button>
+      <a class="creat-acc" href="#">Creat An Account?</a>
+      <a class="lost-pass" href="#">Lost Password?</a>
+    </form>
+    </div>
+  </div>
+  <!--end Форма (папап) регистрации нового пользователя -->
   <!-- end Footer -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/main.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
 </body>
 
 </html>

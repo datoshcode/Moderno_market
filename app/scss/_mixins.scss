@@ -32,6 +32,9 @@ font-family: 'Myriadpro-Regular', sans-serif;
 @mixin icomoon {
   font-family: 'icomoon' !important;
 }
-
-
 // end Fonts
+
+@mixin dfsb {
+  display: flex;
+  justify-content: space-between;
+}

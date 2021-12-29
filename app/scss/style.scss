@@ -22,8 +22,7 @@
 
 // start Header top
 .header__top-inner {
-  display: flex;
-  justify-content: space-between;
+  @include dfsb;
   height: 90px;
   align-items: center;
 }
@@ -325,8 +324,7 @@
 }
 
 .basket__title {
-  display: flex;
-  justify-content: space-between;
+  @include dfsb;
   padding-left: 13px;
   padding-right: 22px;
   margin-bottom: 15px;
@@ -651,8 +649,7 @@
 }
 
 .products__inner-box {
-  display: flex;
-  justify-content: space-between;
+  @include dfsb;
   flex-wrap: wrap;
 }
 
@@ -672,8 +669,7 @@
   }
 
   &-content {
-    display: flex;
-    justify-content: space-between;
+    @include dfsb;
     padding: 10px 30px;
     align-items: center;
     min-height: 90px;
@@ -703,8 +699,7 @@
   }
 
   &-info {
-    display: flex;
-    justify-content: space-between;
+    @include dfsb;
     align-items: center;
     min-height: 70px;
     padding: 10px 30px;
@@ -854,8 +849,7 @@
 
 .product-one__box {
   margin-bottom: 55px;
-  display: flex;
-  justify-content: space-between;
+  @include dfsb;
   text-align: center;
 }
 
@@ -932,8 +926,7 @@
 }
 
 .product-one__more-icons {
-  display: flex;
-  justify-content: space-between;
+  @include dfsb;
   flex-wrap: wrap;
 }
 
@@ -1029,8 +1022,7 @@
 }
 
 .advantages__inner {
-  display: flex;
-  justify-content: space-between;
+  @include dfsb;
 }
 
 .advantages__item {
@@ -1147,8 +1139,7 @@
   padding: 70px 0 120px;
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
+    @include dfsb;
   }
 }
 
@@ -1194,8 +1185,7 @@
 }
 
 .price__box {
-  display: flex;
-  justify-content: space-between;
+  @include dfsb;
   padding: 30px 0;
 }
 
@@ -1342,14 +1332,16 @@
 
 // start page 404
 .page-404__wrapper,
-.about__wrapper {
+.about__wrapper,
+.contact__wrapper {
   border: 1px solid #dcdcdc;
   background-color: #fff;
   margin-bottom: 150px;
 }
 
 .page-404__head,
-.about__head {
+.about__head,
+.contact__head {
   font-size: 24px;
   color: $color-bg-black;
   padding: 23px 27px;
@@ -1426,13 +1418,129 @@ p {
 } 
 // end about
 
+//start contact
+.contact__head {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.contact__inner {
+  padding: 35px 40px 15px;
+}
+
+.contact__map {
+  margin-bottom: 50px;
+  iframe {
+    width: 100%;
+    height: 415px;
+  }
+}
+
+.contact__box {
+  display: flex;
+}
+
+.contact__info {
+  margin-right: 30px;
+  max-width: 330px;
+  width: 100%;
+}  
+
+.contact__info-item {
+margin-bottom: 30px;
+}
+
+.contact__info-title {
+  padding-bottom: 20px;
+  position: relative;
+  font-size: 20px;
+  @include font-roboto-med;
+  color: $color-bg-black;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  &::after {
+    content: '';
+    height: 4px;
+    width: 44px;
+    background-color: $color-green;
+    left: 40px;
+    bottom: 0;
+    position: absolute;
+  }
+  &::before {
+    color: $color-green;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.contact__info-content {
+  padding-left: 40px;
+  color: #707070;
+  max-width: 230px;
+}
+
+.contact__form-row {
+ @include dfsb;
+}
+
+.contact__form {
+  width: 100%;
+  input {
+   border: none;
+   height: 43px;
+   padding-left: 17px;
+   padding-right: 17px;
+   background-color: #f1f4f5;
+   width: 350px;
+   margin-bottom: 30px;
+   &::placeholder {
+    font-size: 15px;
+    color: #7a7a7a;
+   }
+  }
+  textarea {
+   border: none;
+   padding: 13px 17px;
+   height: 190px;
+   background-color: #f1f4f5;
+   width: 100%;
+   display: block;
+   resize: none;
+   margin-bottom: 23px;
+   &::placeholder {
+    font-size: 15px;
+    color: #7a7a7a;
+   }
+  }
+  button {
+  border: none;
+  @include font-roboto-bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f1f4f5;
+  background-color: $color-green;
+  padding: 20px 5px;
+  width: 190px;
+  }
+}
+
+.contact__form-title {
+  font-size: 24px;
+  @include font-roboto-med;
+  color: #333333;
+  margin-bottom: 22px;
+}
+//end contact
+
 // start Footer
 .footer {
   background-color: $color-bg-black;
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
+    @include dfsb;
     padding: 100px 0 80px;
   }
 }

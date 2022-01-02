@@ -1545,11 +1545,13 @@
   color: #333333;
   margin-bottom: 22px;
 }
+
 //end contact
 
 // start settings
 .settings {
   padding-bottom: 100px;
+  background-color: #f4f6f5;
 }
 
 .product-one__tabs.settings__tabs {
@@ -1614,6 +1616,7 @@
 
 .page-box__content {
   padding: 30px 35px 80px;
+
   .settings__btn {
     background-color: $color-green;
     color: #fff;
@@ -1656,18 +1659,24 @@
     color: #707070;
   }
 }
+
 // end settings
 
 // start profile
 
 .profile__inner {
   display: flex;
+  margin-bottom: 30px;
 }
 
 .profile__aside {
   margin-right: 30px;
   max-width: 270px;
   width: 100%;
+
+  & .footer__social-link {
+    margin-bottom: 30px;
+  }
 }
 
 .profile__content {
@@ -1680,6 +1689,7 @@
   border: 1px solid #6d6d6d;
   color: #707070;
   position: relative;
+
   &::before {
     position: absolute;
     content: "\f111";
@@ -1691,15 +1701,15 @@
 }
 
 .profile-on {
-&::before {
-  color: $color-green;
-}
+  &::before {
+    color: $color-green;
+  }
 }
 
 .profile-off {
- &::before {
-  color: $color-red;
- } 
+  &::before {
+    color: $color-red;
+  }
 }
 
 .profile__aside-btn {
@@ -1708,46 +1718,48 @@
 }
 
 .profile__aside-message {
-margin-bottom: 17px;
-display: block;
-width: 100%;
-font-size: 16px;
-color: #fff;  
- @include font-roboto-med;
- background-color: $color-text;
-padding: 18px 10px;
-position: relative;
- box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
-&::before {
-  position: absolute;
-  @include icomoon;
-  content: "\f003";
+  margin-bottom: 17px;
+  display: block;
+  width: 100%;
   font-size: 16px;
   color: #fff;
-  left: 50px;
- top: 17px;
-}
+  @include font-roboto-med;
+  background-color: $color-text;
+  padding: 18px 10px;
+  position: relative;
+  box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+
+  &::before {
+    position: absolute;
+    @include icomoon;
+    content: "\f003";
+    font-size: 16px;
+    color: #fff;
+    left: 50px;
+    top: 17px;
+  }
 }
 
 .profile__aside-following {
-margin-bottom: 17px;
-display: block;
-width: 100%;
-font-size: 16px;
-color: #fff;
-@include font-roboto-bold;
-background-color: $color-green;
-padding: 18px 10px;
-position: relative;
-box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
-&::before {
-  position: absolute;
-  content: '';
-  font-size: 14px;
+  margin-bottom: 17px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
   color: #fff;
-  left: 15px;
-  top: 6px;
-}
+  @include font-roboto-bold;
+  background-color: $color-green;
+  padding: 18px 10px;
+  position: relative;
+  box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+
+  &::before {
+    position: absolute;
+    content: '';
+    font-size: 14px;
+    color: #fff;
+    left: 15px;
+    top: 6px;
+  }
 }
 
 .profile__banner {
@@ -1768,7 +1780,6 @@ box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
 .profile__items {
   display: flex;
   border: 1px solid #dedede;
-  margin-bottom: 20px;
 }
 
 .profile__item {
@@ -1776,8 +1787,9 @@ box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
   background-color: #fff;
   text-align: center;
   padding: 20px 5px 17px;
-  & + .profile__item {
-      border-left: 1px solid #dedede;
+
+  &+.profile__item {
+    border-left: 1px solid #dedede;
   }
 }
 
@@ -1791,6 +1803,7 @@ box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
   color: #707070;
   font-size: 14px;
   @include font-roboto-med;
+
   &.profile__item-sales {
     color: $color-bg-black;
   }
@@ -1799,10 +1812,98 @@ box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
 .profile__item-content-box {
   display: flex;
   margin-left: 25%;
+
   .rate-star {
-   padding-top: 5px;
+    padding-top: 5px;
   }
 }
+
+.profile__settings {
+  .product-one__tabs.settings__tabs {
+    .tabs span {
+      font-family: 'Roboto-Medium', sans-serif !important;
+      font-weight: 500;
+      color: #707070;
+      position: relative;
+      // Все неактивные вкладки
+      &::before {
+        position: absolute;
+        font-size: 14px;
+        @include icomoon;
+        color: #d0d0d0;
+        left: 27px;
+        top: 15px;
+      }
+      // Активная вкладка
+      &.active {
+        font-weight: 600;
+       &::before {
+        color: $color-green;
+      } 
+      }
+      
+    }
+  }
+}
+
+.personal-box {
+  background-color: #fff;
+  padding: 35px 40px 25px;
+  border: 1px solid #dedede;
+  ;
+}
+
+.personal-box__title {
+  margin-bottom: 25px;
+  @include font-roboto-bold;
+  color: $color-bg-black;
+  font-size: 20px;
+}
+
+.personal-box__text {
+  margin-bottom: 20px;
+
+  p {
+    color: #707070;
+  }
+}
+
+.personal-box__item {
+  &-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &-name {
+    font-size: 16;
+    @include font-roboto-med;
+    color: $color-bg-black;
+    font-style: italic;
+  }
+
+  &-number {
+    font-size: 16;
+    @include font-roboto-bold;
+    color: $color-bg-black;
+  }
+}
+
+.personal-box__item-line {
+  height: 15px;
+  background-color: #f4f4f4;
+  border-radius: 3px;
+  margin-bottom: 23px;
+
+  span {
+    display: block;
+    border-radius: inherit;
+    height: inherit;
+    background-image: url(../images/profile/pro-bar.jpg);
+    background-repeat: repeat;
+  }
+}
+
 
 // end profile
 

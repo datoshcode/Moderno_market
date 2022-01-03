@@ -167,15 +167,12 @@
 .icon-users:before {
   content: "\f0c0";
 }
+// Двойная стрелка вверх и вниз
 .icon-sort:before {
   content: "\f0dc";
 }
-.icon-unsorted:before {
-  content: "\f0dc";
-}
-.icon-sort-desc:before {
-  content: "\f0dd";
-}
+
+// Стрелка вниз
 .icon-sort-down:before {
   content: "\f0dd";
 }

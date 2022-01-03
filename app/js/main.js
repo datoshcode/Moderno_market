@@ -25,6 +25,9 @@ var id = $(this).attr('data-id');
   return false;
 });
 
+// Стилизация чекбоксов для форм
+  $('input[type='file'], select').styler();
+
 // Кнопка меню бургер для мобильной версии
   $('.menu__btn').on('click', function(){
     $('.menu__list').slideToggle();

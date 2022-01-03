@@ -13,6 +13,10 @@
 @import 'jquery.rateyo';
 // fancybox
 @import '_jquery.fancybox';
+// jQuery Form Styler
+@import '_jquery.formstyler';
+// jQuery Form Styler theme
+@import '_jquery.formstyler.theme';
 // Slick slider
 @import 'slick';
 // end Фрагменты 
@@ -1822,6 +1826,7 @@
       font-weight: 500;
       color: #707070;
       position: relative;
+
       // Все неактивные вкладки
       &::before {
         position: absolute;
@@ -1831,14 +1836,16 @@
         left: 27px;
         top: 15px;
       }
+
       // Активная вкладка
       &.active {
         font-weight: 600;
-       &::before {
-        color: $color-green;
-      } 
+
+        &::before {
+          color: $color-green;
+        }
       }
-      
+
     }
   }
 }
@@ -1900,6 +1907,7 @@
     background-repeat: repeat;
   }
 }
+
 // end profile
 
 // start upload
@@ -1907,6 +1915,14 @@
   background-color: #fff;
   border: 1px solid #dedede;
   margin-bottom: 110px;
+
+  button {
+    color: #fff;
+    background-color: $color-green;
+    border: none;
+    padding: 15px 36px;
+    margin-left: 175px;
+  }
 }
 
 .upload__inner-title {
@@ -1927,18 +1943,118 @@
 .upload-line {
   margin-bottom: 25px;
   display: flex;
-  align-items: center;
+
   label {
-    width: 175px;
+    padding-top: 5px;
+    min-width: 175px;
     padding-right: 15px;
-    color: #444;;
+    color: #444;
+    ;
+
     span {
       color: $color-green;
     }
+
+    &::placeholder {
+      color: #707070;
+    }
   }
+
+  select,
+  input,
+  textarea {
+    width: 100%;
+    display: block;
+    border: 1px solid #dedede;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+  }
+
+  textarea {
+    padding: 8px 18px;
+    resize: none;
+    height: 150px;
+  }
+
+  input[type="file"] {
+    outline: none;
+  }
+
+  .jq-file__browse {
+    position: absolute;
+    top: 5px;
+    right: auto;
+    left: 9px;
+    text-shadow: none;
+    box-shadow: none;
+    background: #fff;
+    border-radius: 0;
+    border: 1px solid #dedede;
+    font-size: 12px;
+    color: #444;
+    padding: 0 12px;
+    line-height: 26px;
+  }
+
+  .jq-file {
+    box-shadow: none;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid #dedede;
+    height: 40px;
+    background-color: #f9f9f9;
+  }
+
+  .jq-file__name {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    border-bottom-color: transparent;
+    border-radius: 0;
+    padding: 0 18px;
+    height: 40px;
+    width: 100%;
+    font-size: 12px;
+    color: #707070;
+    line-height: 40px;
+    margin-left: 100px;
+  }
+
+  .jq-selectbox {
+    width: 100%;
+  }
+
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #dedede;
+    border-bottom-color: #dedede;
+    border-radius: 0;
+    background: #f9f9f9;
+    box-shadow: none;
+    text-shadow: none;
+    color: #707070;
+    @include font-roboto-reg;
+    line-height: 40px;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: -4px;
+    right: 20px;
+    color: $color-bg-black;
+    font-size: 15px;
+    line-height: 40px;
+    &::before {
+      @include icomoon;
+     content: "\f0dd";
+    }
+  }
+.jq-selectbox__trigger {
+  border-left: none;
 }
-
-
+}
 
 // end upload
 

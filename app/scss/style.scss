@@ -1659,6 +1659,25 @@
     padding: 0 10px;
     color: #707070;
   }
+
+  .jq-selectbox {
+    width: 100%;
+    max-width: 540px;
+  }
+}
+
+.jq-selectbox__select {
+  height: 40px;
+  padding: 0 18px;
+  border: 1px solid #dedede;
+  border-bottom-color: #dedede;
+  border-radius: 0;
+  background: #f9f9f9;
+  box-shadow: none;
+  text-shadow: none;
+  color: #707070;
+  @include font-roboto-reg;
+  line-height: 40px;
 }
 
 // end settings
@@ -1845,7 +1864,6 @@
           color: $color-green;
         }
       }
-
     }
   }
 }
@@ -2175,34 +2193,36 @@
     align-items: center;
     font-size: 13px;
     color: #444;
+
     // Выделить нечетные элементы
     &:nth-child(odd) {
-     background-color: #f9f9f9;
+      background-color: #f9f9f9;
     }
   }
 
   &-date {
-   width: 154px;
-   padding-left: 20px;
-   @include font-roboto-med;
+    width: 154px;
+    padding-left: 20px;
+    @include font-roboto-med;
   }
 
   &-email {
-   width: 180px;
+    width: 180px;
     @include font-roboto-reg;
   }
 
   &-price {
-   width: 70px;
+    width: 70px;
     @include font-roboto-bold;
   }
 
   &-status {
-      width: 88px;
-       @include font-roboto-bold;
-       color: #444;
+    width: 88px;
+    @include font-roboto-bold;
+    color: #444;
+
     &.withdrawals__content-paid {
-     color: $color-green;
+      color: $color-green;
     }
 
   }

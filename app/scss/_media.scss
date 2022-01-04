@@ -30,6 +30,15 @@
   }
 }
 
+// 960 px
+@media (max-width: 960px) {
+  .page-404__404::after {
+    background-size: cover;
+    width: 50px;
+    height: 97px;
+  }
+}
+
 // 900 px
 @media (max-width: 900px) {
   .footer__inner {
@@ -76,8 +85,6 @@
       text-transform: uppercase;
     }
   }
-
-
   // Кнопка меню бургер для мобильной версии в .svg
   .menu__btn {
     svg {
@@ -87,6 +94,28 @@
       fill: #fff;
     }
   }
+}
+
+// 740 px
+@media (max-width: 740px) {
+  .page-404__404 {
+    font-size: 200px;
+    line-height: 200px;
+  }
+.page-404__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.page-404__text {
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.page-404__link {
+  padding: 10px 30px 6px;
+}
 }
 
 // 720 px
@@ -109,6 +138,24 @@
     top: 63px;
     border-top: none;
   }
+}
+
+// 600 px
+@media (max-width: 600px) {
+  .page-404__inner {
+    padding: 0 15px;
+  }
+
+ .page-404__404 {
+  font-size: 120px;
+  line-height: 120px;
+ }
+
+ .page-404__404::after {
+  margin-left: 0;
+  top: 16px;
+  right: 0;
+ }
 }
 
 // 540 px

@@ -5,11 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moderno market place / Contact</title>
-  <!-- Open Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+  <title>Moderno market place / Settings</title>
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -256,65 +252,339 @@
           <div class="breadcrumps__inner">
             <ul class="breadcrumps__list">
               <li class="breadcrumps__item"><a class="breadcrumbs__link" href="#">Home</a></li>
-              <li class="breadcrumps__item"><span>Contact Us</span></li>
+              <li class="breadcrumps__item"><span>Settings</span></li>
             </ul>
           </div>
         </div>
       </div>
       <!-- end Breadcrumps -->
-      <!--start about -->
-      <section class="contact">
+      <!--start Settings -->
+      <section class="settings">
         <div class="container">
-          <div class="contact__wrapper">
-            <div class="contact__head">
-              <h3 class="contact__head-title">
-                Contact With Us
-              </h3>
+          <div class="product-one__tabs settings__tabs">
+            <div class="tabs">
+              <span class="tab angle-right active" data-id="1">Personal Information</span>
+              <span class="tab angle-right" data-id="2">Profile</span>
+              <span class="tab angle-right" data-id="3">Badges</span>
+              <span class="tab angle-right" data-id="4">E-mail Settings</span>
+              <span class="tab angle-right" data-id="5">Social Network</span>
             </div>
-            <div class="contact__inner">
-              <!-- Карта -->
-              <div class="contact__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387852.70894226036!2d-74.30655737144785!3d40.583563746258235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2z0K3QvNC_0LDQudGALdGB0YLQtdC50YIt0LHQuNC70LTQuNC90LM!5e0!3m2!1sru!2sua!4v1640779566673!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-              </div>
-              <div class="contact__box">
-                <div class="contact__info">
-                  <div class="contact__info-item">
-                    <div class="contact__info-title icon-map-marker">Our Office Address</div>
-                    <div class="contact__info-content">
-                      PO Box 16122 Collins Street West 
-                      Victoria 8007 Australia
-                    </div>
-                  </div>
-
-                   <div class="contact__info-item">
-                    <div class="contact__info-title icon-phone">Phone</div>
-                    <a href="tel:61383766284" class="contact__info-content">+61 3 8376 6284</a>
-                  </div>
-
-                   <div class="contact__info-item">
-                    <div class="contact__info-title icon-envelope-o">E-mail</div>
-                    <div class="contact__info-content">info@foxtar.com</div>
+            <div class="tab_content">
+              <!--start Tab page Personal Information-->
+              <div class="tab-item active-tab" id="1">
+                <div class="page-box">
+                  <h2 class="page-box__title">Personal Information</h2>
+                  <div class="page-box__content">
+                    <form>
+                      <!-- setting 1 -->
+                      <div class="settings__line">
+                        <label>First Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 2 -->
+                      <div class="settings__line">
+                        <label>Last Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 3 -->
+                      <div class="settings__line">
+                        <label>Company Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 4 -->
+                      <div class="settings__line">
+                        <label>Country</label>
+                        <select>
+                          <option>Select Your Country_1</option>
+                          <option>Select Your Country_2</option>
+                          <option>Select Your Country_3</option>
+                          <option>Select Your Country_4</option>
+                        </select>
+                      </div>
+                      <!-- setting 5 -->
+                      <div class="settings__line">
+                        <label>Address Line 1</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 6 -->
+                      <div class="settings__line">
+                        <label>Address Line 2</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 7 -->
+                      <div class="settings__line">
+                        <label>City</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 8 -->
+                      <div class="settings__line">
+                        <label>State / Province / Region</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 9 -->
+                      <div class="settings__line">
+                        <label>Zip / Postal Code</label>
+                        <input type="text">
+                      </div>
+                      <button class="settings__btn" type="submit">Update</button>
+                    </form>
                   </div>
                 </div>
-                <div class="contact__form">
-                  <h3 class="contact__form-title">
-                    Drop Us A Message 
-                  </h3>
-                 <form>
-                   <div class="contact__form-row">
-                     <input type="text" placeholder="Name*" required>
-                     <input type="text" placeholder="E-mail*" required>
-                    </div> 
-                     <textarea placeholder="Message*" required></textarea >
-                     <button type="submit">Send Message</button>
-                 </form>
+              </div>
+              <!--end Tab page Personal Information-->
+              <!-- start Tab page Profile -->
+              <div class="tab-item" id="2">
+                <div class="page-box">
+                  <h2 class="page-box__title">Profile</h2>
+                  <div class="page-box__content">
+                    <form>
+                      <!-- setting 1 -->
+                      <div class="settings__line">
+                        <label>First Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 2 -->
+                      <div class="settings__line">
+                        <label>Last Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 3 -->
+                      <div class="settings__line">
+                        <label>Company Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 4 -->
+                      <div class="settings__line">
+                        <label>Country</label>
+                        <select>
+                          <option>Select Your Country_1</option>
+                          <option>Select Your Country_2</option>
+                          <option>Select Your Country_3</option>
+                          <option>Select Your Country_4</option>
+                        </select>
+                      </div>
+                      <!-- setting 5 -->
+                      <div class="settings__line">
+                        <label>Address Line 1</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 6 -->
+                      <div class="settings__line">
+                        <label>Address Line 2</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 7 -->
+                      <div class="settings__line">
+                        <label>City</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 8 -->
+                      <div class="settings__line">
+                        <label>State / Province / Region</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 9 -->
+                      <div class="settings__line">
+                        <label>Zip / Postal Code</label>
+                        <input type="text">
+                      </div>
+                      <button class="settings__btn" type="submit">Update</button>
+                    </form>
+                  </div>
                 </div>
               </div>
+              <!-- end Tab page Profile -->
+              <!-- start Tab page Badges -->
+              <div class="tab-item" id="3">
+                <div class="page-box">
+                  <h2 class="page-box__title">Badges</h2>
+                  <div class="page-box__content">
+                    <form>
+                      <!-- setting 1 -->
+                      <div class="settings__line">
+                        <label>First Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 2 -->
+                      <div class="settings__line">
+                        <label>Last Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 3 -->
+                      <div class="settings__line">
+                        <label>Company Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 4 -->
+                      <div class="settings__line">
+                        <label>Country</label>
+                        <select>
+                          <option>Select Your Country_1</option>
+                          <option>Select Your Country_2</option>
+                          <option>Select Your Country_3</option>
+                          <option>Select Your Country_4</option>
+                        </select>
+                      </div>
+                      <!-- setting 5 -->
+                      <div class="settings__line">
+                        <label>Address Line 1</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 6 -->
+                      <div class="settings__line">
+                        <label>Address Line 2</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 7 -->
+                      <div class="settings__line">
+                        <label>City</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 8 -->
+                      <div class="settings__line">
+                        <label>State / Province / Region</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 9 -->
+                      <div class="settings__line">
+                        <label>Zip / Postal Code</label>
+                        <input type="text">
+                      </div>
+                      <button class="settings__btn" type="submit">Update</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- end Tab page Badges -->
+              <!-- start Tab page E-mail Settings -->
+              <div class="tab-item" id="4">
+                <div class="page-box">
+                  <h2 class="page-box__title">E-mail Settings</h2>
+                  <div class="page-box__content">
+                    <form>
+                      <!-- setting 1 -->
+                      <div class="settings__line">
+                        <label>First Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 2 -->
+                      <div class="settings__line">
+                        <label>Last Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 3 -->
+                      <div class="settings__line">
+                        <label>Company Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 4 -->
+                      <div class="settings__line">
+                        <label>Country</label>
+                        <select>
+                          <option>Select Your Country_1</option>
+                          <option>Select Your Country_2</option>
+                          <option>Select Your Country_3</option>
+                          <option>Select Your Country_4</option>
+                        </select>
+                      </div>
+                      <!-- setting 5 -->
+                      <div class="settings__line">
+                        <label>Address Line 1</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 6 -->
+                      <div class="settings__line">
+                        <label>Address Line 2</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 7 -->
+                      <div class="settings__line">
+                        <label>City</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 8 -->
+                      <div class="settings__line">
+                        <label>State / Province / Region</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 9 -->
+                      <div class="settings__line">
+                        <label>Zip / Postal Code</label>
+                        <input type="text">
+                      </div>
+                      <button class="settings__btn" type="submit">Update</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- end Tab page E-mail Settings -->
+              <!-- start Tab page Social Network -->
+              <div class="tab-item" id="5">
+                <div class="page-box">
+                  <h2 class="page-box__title">Social Network</h2>
+                  <div class="page-box__content">
+                    <form>
+                      <!-- setting 1 -->
+                      <div class="settings__line">
+                        <label>First Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 2 -->
+                      <div class="settings__line">
+                        <label>Last Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 3 -->
+                      <div class="settings__line">
+                        <label>Company Name</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 4 -->
+                      <div class="settings__line">
+                        <label>Country</label>
+                        <select>
+                          <option>Select Your Country_1</option>
+                          <option>Select Your Country_2</option>
+                          <option>Select Your Country_3</option>
+                          <option>Select Your Country_4</option>
+                        </select>
+                      </div>
+                      <!-- setting 5 -->
+                      <div class="settings__line">
+                        <label>Address Line 1</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 6 -->
+                      <div class="settings__line">
+                        <label>Address Line 2</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 7 -->
+                      <div class="settings__line">
+                        <label>City</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 8 -->
+                      <div class="settings__line">
+                        <label>State / Province / Region</label>
+                        <input type="text">
+                      </div>
+                      <!-- setting 9 -->
+                      <div class="settings__line">
+                        <label>Zip / Postal Code</label>
+                        <input type="text">
+                      </div>
+                      <button class="settings__btn" type="submit">Update</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- end Tab page Social Network -->
             </div>
           </div>
         </div>
       </section>
-      <!--end about -->
+      <!--end Settings -->
     </main>
     <!-- start Footer -->
     <footer class="footer">
@@ -393,6 +663,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/main.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/jquery.formstyler.js"></script>
 </body>
 
 </html>

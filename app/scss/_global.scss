@@ -27,16 +27,15 @@ ul {
 html,
 body {
  height: 100%; 
+ position: relative;
+ overflow-x: hidden;
 }
 
 body {
   @include font-roboto-reg;
   font-size: 15px;
   line-height: 24px;
-  color: $color-text;
-  // overflow-x: hidden необходим чтобы не было нижнего скрола при нажатии 
-  // на кнопку "Пользователь" мобильной версии
-   overflow-x: hidden;
+  color: $color-text; 
 }
 
 .wrapper {
